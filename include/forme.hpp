@@ -21,11 +21,11 @@ template <typename T>
 class Forme
 {
 protected:
-    Point<int> centreForme_;
+    Point<T> centreForme_;
 
 public:
-    Forme(int x, int y) : centreForme_(x, y) {}
-    Forme(Forme const &f) : centreForme_(f.centreForme_) {}
+    Forme(T x, T y) : centreForme_(x, y) {}
+    Forme(Point<T> const &f) : centreForme_(f) {}
     ~Forme() = default;
 
     friend ostream &operator<<(ostream &s, Forme const &f)
