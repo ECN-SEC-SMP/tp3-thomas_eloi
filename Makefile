@@ -6,11 +6,11 @@ ASSETSDIR := assets
 all: $(BUILDDIR)/main.out
 
 # Build the final executable
-$(BUILDDIR)/main.out: $(BUILDDIR)/main.o
+$(BUILDDIR)/main.out: $(BUILDDIR)/main.o | $(BUILDDIR)
 	g++ -o $@ $^
 
 # Build main.o
-$(BUILDDIR)/main.o: $(SRCDIR)/main.cpp | $(BUILDDIR)
+$(BUILDDIR)/main.o: $(SRCDIR)/main.cpp $(INCDIR)/point.hpp | $(BUILDDIR)
 	g++ -I$(INCDIR) -c $(SRCDIR)/main.cpp -o $(BUILDDIR)/main.o
 
 # Create build directory
@@ -18,4 +18,4 @@ $(BUILDDIR):
 	mkdir -p $(BUILDDIR)
 
 clean:
-	rm -rfv $(BUILDDIR) && rm -rfv $(ASSETSDIR)/lexique*
+	rm -rfv $(BUILDDIR)

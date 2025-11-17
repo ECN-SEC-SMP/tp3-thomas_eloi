@@ -33,12 +33,11 @@ public:
         this->y_ += dy;
     }
 
-    T getX() : return this->x_;
-    T getY() : return this->y_;
+    T getX() { return x_; }
+    T getY() { return y_; }
     
-    void changeX(T x) : x_(x) {}
-    void changeY(T y) : y_(y) {}
-
+    void changeX(T x) { x_ = x; }
+    void changeY(T y) { y_ = y; }
     friend ostream &operator<<(ostream& s, Point const &p) {
         s << " le point à pour coordonnée x, y : (" << p.x_ << ", " << p.y_ << ")";
         return s;
