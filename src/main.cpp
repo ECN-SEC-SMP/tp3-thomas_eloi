@@ -14,6 +14,7 @@
 #include "forme.hpp"
 #include "rectangle.hpp"
 #include "carree.hpp"
+#include "listeformes.hpp"
 
 int main() {
 
@@ -68,6 +69,15 @@ int main() {
         cout << c << endl;
         cout << "Périmètre : " << c.perimetre() << endl;
         cout << "Surface : " << c.surface() << endl;
+
+    // Test de la classe listeformes
+    ListeFormes<int> liste;
+        liste.ajouterForme(new Rectangle<int>(Point<int>(0, 0), 4, 6));
+        liste.ajouterForme(new Carree<int>(Point<int>(10, 10), 5));
+        cout << "Nombre de formes : " << liste.nbFormes() << endl;
+        cout << "Surface totale : " << liste.surfaceTotale() << endl;
+        Rectangle<int> enveloppe = liste.enveloppeMinimale();
+        cout << "Enveloppe minimale : " << enveloppe << endl;
 
     return 0;
 }
