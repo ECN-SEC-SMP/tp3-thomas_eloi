@@ -11,12 +11,13 @@
 
 #pragma once
 
-#include <iostream>
-
 #include "point.hpp"
 
-using namespace std;
-
+/**
+ * @brief Classe représentant une forme géométrique
+ * 
+ * @tparam T Type des coordonnées
+ */
 template <typename T>
 class Forme
 {
@@ -34,7 +35,7 @@ public:
         return s;
     }
 
-    virtual T perimetre();
+    virtual T perimetre() = 0;
 
-    virtual T surface();
+    virtual T surface() = 0;
 };

@@ -1,6 +1,23 @@
+/**
+ * @file rectangle.hpp
+ * @author Eloi Tourangin (eloi.tourangin@eleves.ec-nantes.fr) & Thomas Verron (thomas.verron@eleves.ec-nantes.fr)
+ * @brief 
+ * @version 0.1
+ * @date 17-11-2025
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
+
 #pragma once
+
 #include "forme.hpp"
 
+/**
+ * @brief Classe représentant un rectangle
+ * 
+ * @tparam T Type des coordonnées et dimensions
+ */
 template <typename T>
 class Rectangle : public Forme<T> { 
     protected :
@@ -15,6 +32,4 @@ class Rectangle : public Forme<T> {
     T surface() override {
         return longueur_ * largeur_;
     }
-
-
 };

@@ -13,10 +13,18 @@
 
 #include "rectangle.hpp"
 
+/**
+ * @brief Classe représentant un carré
+ * 
+ * @tparam T Type des coordonnées et dimensions
+ */
 template <typename T>
 class Carree : public Rectangle<T> {
     protected :
+    T cote_;
 
     public :
+        Carree(Point<T> const &p1, T cote) : Rectangle<T>(p1, cote, cote), cote_(cote) {}
+        ~Carree() = default;
         
 };
