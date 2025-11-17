@@ -13,6 +13,7 @@
 #include "point.hpp"
 #include "forme.hpp"
 #include "rectangle.hpp"
+#include "carree.hpp"
 
 int main() {
 
@@ -51,6 +52,12 @@ int main() {
         cout << r << endl;
         cout << "Périmètre : " << r.perimetre() << endl;
         cout << "Surface : " << r.surface() << endl;
+
+    // Test de la classe carree
+    Carree<int> c(p, 5);
+        cout << c << endl;
+        cout << "Périmètre : " << c.perimetre() << endl;
+        cout << "Surface : " << c.surface() << endl;
 
     return 0;
 }

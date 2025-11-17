@@ -17,7 +17,7 @@ using namespace std;
 
 /**
  * @brief Classe représentant un point
- * 
+ *
  * @tparam T Type des coordonnées
  */
 template <typename T>

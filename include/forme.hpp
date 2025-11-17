@@ -15,7 +15,7 @@
 
 /**
  * @brief Classe représentant une forme géométrique
- * 
+ *
  * @tparam T Type des coordonnées
  */
 template <typename T>
