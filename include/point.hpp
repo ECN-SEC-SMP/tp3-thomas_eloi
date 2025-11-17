@@ -14,8 +14,11 @@ public:
     void translater(T dx, t dy);
     T getX();
     T getY();
-    void changeX(T x);
-    void changeY(T y);
+    void changeX(T x) : x_(x) {}
+    void changeY(T y) : y_(y) {}
 
-    friend ostream &operator<<(ostream& s, Point const &p);
+    friend ostream &operator<<(ostream& s, Point const &p) {
+        s << " le point à pour coordonnée x, y : (" << p.x_ << ", " << p.y_ << ")";
+        return s;
+    }
 };
