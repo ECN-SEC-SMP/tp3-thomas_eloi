@@ -11,14 +11,11 @@
 
 
 #include "point.hpp"
-
-
-using namespace std;
+#include "forme.hpp"
 
 int main() {
 
-    // Test de la classe Point
-
+    // Test de la classe Point int
      Point<int> p(2, 3);
         cout << p.getX() << endl;
         cout << p.getY() << endl;
@@ -32,6 +29,21 @@ int main() {
         cout << p.getX() << endl;
         cout << p.getY() << endl;
         cout << p << endl;
+
+    // Test de la classe Point float
+    Point<float> pf(2.5, 3.5);
+        cout << pf.getX() << endl;
+        cout << pf.getY() << endl;
+        cout << pf << endl;
+        pf.translater(1.5, -1.5);
+        cout << pf.getX() << endl;
+        cout << pf.getY() << endl;
+        cout << pf << endl;
+        pf.changeX(5.5);
+        pf.changeY(7.5);
+        cout << pf.getX() << endl;
+        cout << pf.getY() << endl;
+        cout << pf << endl;
 
     return 0;
 }

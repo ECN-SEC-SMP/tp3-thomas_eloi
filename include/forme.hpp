@@ -34,8 +34,7 @@ public:
         return s;
     }
 
-    // virtual T perimetre
+    virtual T perimetre();
 
-    // virtual T surface
-
-}
+    virtual T surface();
+};

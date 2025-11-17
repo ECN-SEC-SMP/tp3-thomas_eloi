@@ -10,7 +10,7 @@ $(BUILDDIR)/main.out: $(BUILDDIR)/main.o | $(BUILDDIR)
 	g++ -o $@ $^
 
 # Build main.o
-$(BUILDDIR)/main.o: $(SRCDIR)/main.cpp $(INCDIR)/point.hpp | $(BUILDDIR)
+$(BUILDDIR)/main.o: $(SRCDIR)/main.cpp $(INCDIR)/point.hpp $(INCDIR)/forme.hpp | $(BUILDDIR)
 	g++ -I$(INCDIR) -c $(SRCDIR)/main.cpp -o $(BUILDDIR)/main.o
 
 # Create build directory
