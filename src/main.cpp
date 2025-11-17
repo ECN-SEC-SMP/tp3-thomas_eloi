@@ -78,6 +78,5 @@ int main() {
         cout << "Surface totale : " << liste.surfaceTotale() << endl;
         Rectangle<int> enveloppe = liste.enveloppeMinimale();
         cout << "Enveloppe minimale : " << enveloppe << endl;
-
     return 0;
 }

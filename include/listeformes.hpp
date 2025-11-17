@@ -71,15 +71,15 @@ public:
             throw std::runtime_error("La liste de formes est vide.");
         }
 
-        T minX = formes_[0]->centreForme_.getX();
-        T maxX = formes_[0]->centreForme_.getX();
-        T minY = formes_[0]->centreForme_.getY();
-        T maxY = formes_[0]->centreForme_.getY();
+        T minX = formes_[0]->getCentre().getX();
+        T maxX = formes_[0]->getCentre().getX();
+        T minY = formes_[0]->getCentre().getY();
+        T maxY = formes_[0]->getCentre().getY();
 
         for (auto f : formes_)
         {
-            T x = f->centreForme_.getX();
-            T y = f->centreForme_.getY();
+            T x = f->getCentre().getX();
+            T y = f->getCentre().getY();
 
             if (x < minX) minX = x;
             if (x > maxX) maxX = x;

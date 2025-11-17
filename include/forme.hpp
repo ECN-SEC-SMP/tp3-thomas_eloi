@@ -35,6 +35,11 @@ public:
         return s;
     }
 
+    Point<T> getCentre() const
+    {
+        return centreForme_;
+    }
+
     virtual T perimetre() = 0;
 
     virtual T surface() = 0;
