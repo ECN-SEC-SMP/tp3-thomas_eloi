@@ -47,6 +47,16 @@ int main() {
         cout << pf.getY() << endl;
         cout << pf << endl;
 
+    // Specialization test for string
+    Point<string> ps("2", "3");
+        cout << ps.getX() << endl;
+        cout << ps.getY() << endl;
+        cout << ps << endl;
+        ps.translater("4", "6");
+        cout << ps.getX() << endl;
+        cout << ps.getY() << endl;
+        cout << ps << endl;
+
     // Test de la classe rectangle
     Rectangle<int> r(p, 4, 6);
         cout << r << endl;

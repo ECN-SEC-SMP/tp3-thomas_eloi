@@ -17,7 +17,7 @@ using namespace std;
 
 /**
  * @brief Classe représentant un point
- *
+ * 
  * @tparam T Type des coordonnées
  */
 template <typename T>
@@ -32,11 +32,7 @@ public:
     Point(Point const &p) : x_(p.x_), y_(p.y_) {}
     ~Point() = default;
 
-    void translater(T dx, T dy)
-    {
-        this->x_ += dx;
-        this->y_ += dy;
-    }
+    void translater(T dx, T dy);
 
     T getX() { return x_; }
     T getY() { return y_; }
@@ -50,3 +46,17 @@ public:
         return s;
     }
 };
+
+template <typename T>
+void Point<T>::translater(T dx, T dy)   
+{
+    x_ += dx;
+    y_ += dy;
+}
+
+template <>
+void Point<string>::translater(string dx, string dy)   
+{
+    swap(x_, dx);
+    swap(y_, dy);
+}
