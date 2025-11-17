@@ -32,4 +32,16 @@ class Rectangle : public Forme<T> {
     T surface() override {
         return longueur_ * largeur_;
     }
+     template <typename U>
+    friend ostream &operator<<(ostream &os, Rectangle<U> const &r);
 };
+
+// Définition de l’opérateur << (template à part)
+template <typename U>
+ostream &operator<<(ostream &os, Rectangle<U> const &r)
+{
+    os << "Rectangle : centre = " << r.centreForme_
+       << ", longueur = " << r.longueur_
+       << ", largeur = " << r.largeur_;
+    return os;
+}

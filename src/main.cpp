@@ -12,6 +12,7 @@
 
 #include "point.hpp"
 #include "forme.hpp"
+#include "rectangle.hpp"
 
 int main() {
 
@@ -44,6 +45,12 @@ int main() {
         cout << pf.getX() << endl;
         cout << pf.getY() << endl;
         cout << pf << endl;
+
+    // Test de la classe rectangle
+    Rectangle<int> r(p, 4, 6);
+        cout << r << endl;
+        cout << "Périmètre : " << r.perimetre() << endl;
+        cout << "Surface : " << r.surface() << endl;
 
     return 0;
 }
